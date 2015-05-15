@@ -1,6 +1,6 @@
 # Compile Setting
 CXX = g++
-CXXFLAGS = -O2 -Wall -std=c++11 -g
+CXXFLAGS = -O2 -Wall -std=c++11
 
 # Project Setting
 BIN = GradeSystem
@@ -9,7 +9,6 @@ OBJ = main.o init.o load.o insert.o suspend.o calc.o print.o search.o
 # Make Targer
 
 all: build
-
 
 clean:
 		@echo "Removing *.o and $(BIN)......"
