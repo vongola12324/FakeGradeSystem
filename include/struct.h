@@ -2,16 +2,27 @@ using namespace std;
 
 struct _Course{
     string CourseCode;
+    int Point;
     int Score;
 
     _Course(string CourseCode){
         this->CourseCode = CourseCode;
         this->Score = 0;
+        this->Point = 0;
     }
 
-    void loadCourse(string CourseCode, int Score){
+    void loadCourse(string CourseCode, int Score, int Point){
         this->CourseCode = CourseCode;
         this->Score = Score;
+        this->Point = Point;
+    }
+
+    void getPoint(){
+        return this->Point;
+    }
+
+    void getScore(){
+        return this->Score;
     }
 };
 
@@ -42,5 +53,15 @@ struct Student{
     void printData(){
         cout << "Name: " << this->StudentName << endl;
         cout << "ID  : " << this->StudentID << endl;
+    }
+
+    string getUID(){
+        return this->StudentID;
+    }
+
+    void setAvgData(int TotCoursePoints, int TotCredits){
+        this->TotCoursePoints = TotCoursePoints;
+        this->TotCredits = TotCredits;
+        this->Average = (double)TotCoursePoints / (double)TotCredits;
     }
 };

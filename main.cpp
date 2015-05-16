@@ -29,8 +29,10 @@ int main(){
             case '2':
                 break;
             case '3':
+                suspendStudent(stu);
                 break;
             case '4':
+                calcAverage(stu)
                 break;
             case '5':
                 break;

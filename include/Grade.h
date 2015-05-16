@@ -17,5 +17,8 @@ using namespace std;
 
 // Function declare
 void loadStudent(list<Student> &stu);
+void suspendStudent(list<Student> &stu);
+void calcAverage(list<Student> &stu);
+list<Student>::iterator findStudentByUID(list<Student> &stu, string ID);
 
 #endif
