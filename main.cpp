@@ -27,6 +27,7 @@ int main(){
                 loadStudent(stu);
                 break;
             case '2':
+                groupInsert(list<Student> &stu);
                 break;
             case '3':
                 suspendStudent(stu);
