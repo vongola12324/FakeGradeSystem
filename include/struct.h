@@ -11,10 +11,14 @@ struct _Course{
         this->Point = 0;
     }
 
-    void loadCourse(string CourseCode, int Score, int Point){
+    void setCourse(string CourseCode, int Score, int Point){
         this->CourseCode = CourseCode;
         this->Score = Score;
         this->Point = Point;
+    }
+
+    string getCode(){
+        return this->CourseCode;
     }
 
     int getPoint(){
@@ -50,13 +54,28 @@ struct Student{
         this->ActFlag = true;
     }
 
-    void printData(){
-        cout << "Name: " << this->StudentName << endl;
-        cout << "ID  : " << this->StudentID << endl;
+    bool getActFlag(){
+        return this->ActFlag;
     }
 
     string getUID(){
         return this->StudentID;
+    }
+
+    string getName(){
+        return this->StudentName;
+    }
+
+    int getTotCoursePoints(){
+        return this->TotCoursePoints;
+    }
+
+    int getTotCredits(){
+        return this->TotCredits;
+    }
+
+    double getAverage(){
+        return this->Average;
     }
 
     void setAvgData(int TotCoursePoints, int TotCredits){
