@@ -32,7 +32,7 @@ int main(){
                 suspendStudent(stu);
                 break;
             case '4':
-                calcAverage(stu)
+                calcAverage(stu);
                 break;
             case '5':
                 break;

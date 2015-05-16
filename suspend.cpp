@@ -6,12 +6,12 @@ void suspendStudent(list<Student> &stu){
     cout << "Enter Student ID: ";
     cin >> UID;
     it = findStudentByUID(stu, UID);
-    if(it is NULL){
-        cout << "Student Not Found!"
+    if(it == stu.end()){
+        cout << "Student Not Found!";
     }
     else{
-        it.ActFlag = false;
-        cout << "Student " + it.getUID() + " is suspend!" << endl;
+        it->ActFlag = false;
+        cout << "Student " + it->getUID() + " is suspend!" << endl;
     }
     cout << "Press Enter to Continue......";
     scanf("%*s");

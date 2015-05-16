@@ -17,11 +17,11 @@ struct _Course{
         this->Point = Point;
     }
 
-    void getPoint(){
+    int getPoint(){
         return this->Point;
     }
 
-    void getScore(){
+    int getScore(){
         return this->Score;
     }
 };
