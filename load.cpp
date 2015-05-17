@@ -10,8 +10,6 @@ void loadStudent(list<Student> &stu){
         fin.open(filename);
         if(!fin){
             cout << "Error: Can\'t open file! (Wrong filename?)" << endl;
-            cout << "Press Enter to Continue." << endl;
-            scanf("%*c");
         }
     }while(!fin);
     while(fin >> ID >> Name){
@@ -19,6 +17,9 @@ void loadStudent(list<Student> &stu){
         newStu.setIDandName(ID, Name);
         stu.push_back(newStu);
     }
+    cout << "Load file \"" + filename + "\" Success!!" << endl;
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     fin.close();
     return;
 }

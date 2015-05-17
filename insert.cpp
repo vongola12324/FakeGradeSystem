@@ -10,8 +10,8 @@ void groupInsert(list<Student> &stu){
         fin.open(filename);
         if(!fin){
             cout << "Error: Can\'t open file! (Wrong filename?)" << endl;
-            cout << "Press Enter to Continue." << endl;
-            scanf("%*c");
+            cout << "Press Enter to Continue......" ;
+            cin.get();
         }
     }while(!fin);
     if(filename.find(".txt")!=string::npos)
@@ -35,12 +35,14 @@ void groupInsert(list<Student> &stu){
             else{
                 it2->setCourse(filename, Score, Point);
             }
+            cout << "Insert Course \"" + filename + "\" Success!!" << endl;
         }
         else{
             cout << "Student ID: " + UID + " not found!" << endl;
         }
     }
-
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     fin.close();
     return;
 }

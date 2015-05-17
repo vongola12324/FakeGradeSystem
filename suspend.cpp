@@ -13,7 +13,7 @@ void suspendStudent(list<Student> &stu){
         it->ActFlag = false;
         cout << "Student " + it->getUID() + " is suspend!" << endl;
     }
-    cout << "Press Enter to Continue......";
-    scanf("%*s");
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     return;
 }

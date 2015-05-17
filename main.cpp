@@ -52,7 +52,7 @@ int main(){
                 break;
             default:
                 cout << "Error: Wrong Input, Press Enter to Continue." << endl;
-                scanf("%*c");
+                cin.get();
         }
     }while(act != '7');
     return 0;

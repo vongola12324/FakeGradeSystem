@@ -20,6 +20,8 @@ void printAllData(list<Student> &stu){
 
     }
     cout << "---------------------------------------------------" << endl;
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     return;
 }
 
@@ -46,5 +48,7 @@ void printSingleData(list<Student> &stu){
     else{
         cout << "Error: Student ID: " + UID + " not found!"  << endl;
     }
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     return;
 }
