@@ -19,9 +19,7 @@ int main(){
         cout << "  7) Quit " << endl;
         cout << endl;
         cout << "Enter (1-7)>> ";
-        act = getchar();
-        // Clean Return
-        scanf("%*c");
+        scanf("%c%*c", &act);
         switch (act) {
             case '1':
                 loadStudent(stu);
@@ -43,17 +41,19 @@ int main(){
                 break;
             case '7':
                 cout << "Sure to Quit? [y/N]: ";
-                act = getchar();
-                scanf("%*c");
+                scanf("%c%*c", &act);
                 if(act is 'y' or act is 'Y')
                     act = '7';
                 else
                     act = '0';
                 break;
             default:
-                cout << "Error: Wrong Input, Press Enter to Continue." << endl;
+                cout << "Error: Wrong Input, Press Enter to Continue......" << endl;
                 cin.get();
         }
     }while(act != '7');
+    cout << endl << "Bye." << endl;
+    cout << "Press Enter to Continue......" ;
+    cin.get();
     return 0;
 }
