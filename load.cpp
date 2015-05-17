@@ -7,6 +7,7 @@ void loadStudent(list<Student> &stu){
     do{
         cout << "Enter Filename: ";
         cin >> filename;
+        cin.get();
         fin.open(filename);
         if(!fin){
             cout << "Error: Can\'t open file! (Wrong filename?)" << endl;
