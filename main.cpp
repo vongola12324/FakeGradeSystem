@@ -27,7 +27,7 @@ int main(){
                 loadStudent(stu);
                 break;
             case '2':
-                groupInsert(list<Student> &stu);
+                groupInsert(stu);
                 break;
             case '3':
                 suspendStudent(stu);
@@ -36,8 +36,10 @@ int main(){
                 calcAverage(stu);
                 break;
             case '5':
+                printAllData(stu);
                 break;
             case '6':
+                printSingleData(stu);
                 break;
             case '7':
                 cout << "Sure to Quit? [y/N]: ";

@@ -16,13 +16,19 @@
 using namespace std;
 
 // Function declare
+// Load
 void loadStudent(list<Student> &stu);
+// Suspend
 void suspendStudent(list<Student> &stu);
+// Insert
 void groupInsert(list<Student> &stu);
+// Calc
 void calcAverage(list<Student> &stu);
-
-// Search.cpp
+// Search
 list<Student>::iterator findStudentByUID(list<Student> &stu, string ID);
 list<_Course>::iterator findCourseByCode(list<_Course> &Course, string Code);
+// Print
+void printAllData(list<Student> &stu);
+void printSingleData(list<Student> &stu);
 
 #endif
