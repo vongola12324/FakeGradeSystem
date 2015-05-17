@@ -4,11 +4,7 @@ int main(){
     list<Student> stu;
     char act = '1';
     do{
-        system("clear");
-        cout << endl;
-        cout << "FengYou Academy Grade System" << endl;
-        cout << "Version 1.0" << endl;
-        cout << "==================================" << endl;
+        showHint(0);
         cout << "Menu: " << endl;
         cout << "  1) Load " << endl;
         cout << "  2) Group Insert " << endl;

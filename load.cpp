@@ -1,13 +1,12 @@
 #include "include/Grade.h"
 
 void loadStudent(list<Student> &stu){
-    system("clear");
+    showHint(1);
     string filename = "", ID="", Name="";
     ifstream fin;
     do{
         cout << "Enter Filename: ";
-        cin >> filename;
-        cin.get();
+        getline(cin, filename);
         fin.open(filename);
         if(!fin){
             cout << "Error: Can\'t open file! (Wrong filename?)" << endl;

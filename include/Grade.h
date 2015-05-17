@@ -30,5 +30,6 @@ list<_Course>::iterator findCourseByCode(list<_Course> &Course, string Code);
 // Print
 void printAllData(list<Student> &stu);
 void printSingleData(list<Student> &stu);
+void showHint(int mode);
 
 #endif

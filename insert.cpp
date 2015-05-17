@@ -1,6 +1,7 @@
 #include "include/Grade.h"
 
 void groupInsert(list<Student> &stu){
+    showHint(2);
     // Open File
     string filename = "";
     ifstream fin;
@@ -23,6 +24,7 @@ void groupInsert(list<Student> &stu){
     int Point;
     cout << "Enter CourseCredit for " + filename + " : ";
     cin >> Point;
+    cin.get();
     while(fin >> UID >> Score){
         list<Student>::iterator it = findStudentByUID(stu, UID);
         if(it!=stu.end()){
@@ -35,12 +37,12 @@ void groupInsert(list<Student> &stu){
             else{
                 it2->setCourse(filename, Score, Point);
             }
-            cout << "Insert Course \"" + filename + "\" Success!!" << endl;
         }
         else{
             cout << "Student ID: " + UID + " not found!" << endl;
         }
     }
+    cout << "Insert Course \"" + filename + "\" Finished!!" << endl;
     cout << "Press Enter to Continue......" ;
     cin.get();
     fin.close();

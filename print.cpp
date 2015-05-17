@@ -1,6 +1,7 @@
 #include "include/Grade.h"
 
 void printAllData(list<Student> &stu){
+    showHint(5);
     for ( Student it: stu ){
         if( it.getActFlag() ){
             cout << "---------------------------------------------------" << endl;
@@ -26,9 +27,11 @@ void printAllData(list<Student> &stu){
 }
 
 void printSingleData(list<Student> &stu){
+    showHint(6);
     string UID;
     cout << "Enter Student ID: ";
     cin >> UID;
+    cin.get();
     list<Student>::iterator it = findStudentByUID(stu, UID);
     if(it!=stu.end()){
         cout << "Here is the Data of " << UID << " : " << endl;
@@ -48,7 +51,44 @@ void printSingleData(list<Student> &stu){
     else{
         cout << "Error: Student ID: " + UID + " not found!"  << endl;
     }
+    cout << endl;
     cout << "Press Enter to Continue......" ;
     cin.get();
+    return;
+}
+
+void showHint(const int mode){
+    system("clear");
+    cout << endl;
+    cout << "FengYou Academy Grade System" << endl;
+    cout << "Version 1.0" << endl;
+    cout << "==================================" << endl;
+    switch(mode){
+        case 1:
+            cout << "Load : load student data from file." << endl;
+            cout << endl;
+            break;
+        case 2:
+            cout << "GroupInsert : load student's course data from file." << endl;
+            cout << "              (include UID and score)" << endl;
+            cout << endl;
+            break;
+        case 3:
+            cout << "Suspend : change student's ActFlag to \"False\"(leave school)." << endl;
+            cout << endl;
+            break;
+        case 4:
+            cout << "Calculate Average : Use the data in list to calc average." << endl;
+            cout << endl;
+            break;
+        case 5:
+            cout << "Print (All Data) : Print All Student in list(Which is not leave school)." << endl;
+            cout << endl;
+            break;
+        case 6:
+            cout << "Print (Individual Only) : Print Single Student Data." << endl;
+            cout << endl;
+            break;
+    }
     return;
 }
