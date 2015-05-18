@@ -1,3 +1,11 @@
+/****************************************************
+ *  Project Name: GradeSystem                       *
+ *  Project Author: Vongola <vongola12324@coder.tw> *
+ *  Project Version: 1.1                            *
+ *  Project VCS URL: FakeGradeSystem @ GitHub       *
+ *  Project License: GNU GPLv3                      *
+ ****************************************************/
+
 #include "include/Grade.h"
 
 int main(){

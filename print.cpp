@@ -1,5 +1,18 @@
+/****************************************************
+ *  Project Name: GradeSystem                       *
+ *  Project Author: Vongola <vongola12324@coder.tw> *
+ *  Project Version: 1.1                            *
+ *  Project VCS URL: FakeGradeSystem @ GitHub       *
+ *  Project License: GNU GPLv3                      *
+ ****************************************************/
+
 #include "include/Grade.h"
 
+/* printAllData
+ * Use    : Print All Students' Data in Student list.
+ * Need   : Student(list)
+ * Return : None
+ */
 void printAllData(list<Student> &stu){
     showHint(5);
     for ( Student it: stu ){
@@ -26,6 +39,11 @@ void printAllData(list<Student> &stu){
     return;
 }
 
+/* printSingleData
+ * Use    : Print Single Student's Data in Student list.
+ * Need   : Student(list)
+ * Return : None
+ */
 void printSingleData(list<Student> &stu){
     showHint(6);
     string UID;
@@ -57,6 +75,11 @@ void printSingleData(list<Student> &stu){
     return;
 }
 
+/* printAllData
+ * Use    : Show Hint on the top of each feature.
+ * Need   : mode (const int)
+ * Return : None
+ */
 void showHint(const int mode){
     system("clear");
     cout << endl;

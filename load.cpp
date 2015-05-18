@@ -1,5 +1,18 @@
+/****************************************************
+ *  Project Name: GradeSystem                       *
+ *  Project Author: Vongola <vongola12324@coder.tw> *
+ *  Project Version: 1.1                            *
+ *  Project VCS URL: FakeGradeSystem @ GitHub       *
+ *  Project License: GNU GPLv3                      *
+ ****************************************************/
+
 #include "include/Grade.h"
 
+/* suspendStudent
+ * Use    : Load Students' data from file.
+ * Need   : Student(list)
+ * Return : None
+ */
 void loadStudent(list<Student> &stu){
     showHint(1);
     string filename = "", ID="", Name="";
