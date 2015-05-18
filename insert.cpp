@@ -41,15 +41,20 @@ void groupInsert(list<Student> &stu){
     while(fin >> UID >> Score){
         list<Student>::iterator it = findStudentByUID(stu, UID);
         if(it!=stu.end()){
-            list<_Course>::iterator it2 = findCourseByCode(it->Course, filename);
-            if(it2==it->Course.end()){
-                _Course newCourse(filename);
-                newCourse.setCourse(filename, Score, Point);
-                it->Course.push_back(newCourse);
+            if(it->getActFlag()){
+                list<_Course>::iterator it2 = findCourseByCode(it->Course, filename);
+                if(it2==it->Course.end()){
+                    _Course newCourse(filename);
+                    newCourse.setCourse(filename, Score, Point);
+                    it->Course.push_back(newCourse);
+                }
+                else{
+                    cout << "Warning: Find a same course in Student ID: \"" + it->getUID() + "\", Update it!" << endl;
+                    it2->setCourse(filename, Score, Point);
+                }
             }
             else{
-                cout << "Warning: Find a same course in Student ID: \"" + it->getUID() + "\", Update it!" << endl;
-                it2->setCourse(filename, Score, Point);
+                cout << "Warning: The Student is suspended, ignore!" << endl;
             }
         }
         else{
