@@ -13,9 +13,15 @@ void loadStudent(list<Student> &stu){
         }
     }while(!fin);
     while(fin >> ID >> Name){
-        Student newStu;
-        newStu.setIDandName(ID, Name);
-        stu.push_back(newStu);
+        list<Student>::iterator it = findStudentByUID(UID);
+        if(it==stu.end()){
+            Student newStu;
+            newStu.setIDandName(ID, Name);
+            stu.push_back(newStu);
+        }
+        else{
+            cout << "Warning: Find same student in list, ignore......." << endl;
+        }
     }
     cout << "Load file \"" + filename + "\" Success!!" << endl;
     cout << "Press Enter to Continue......" ;

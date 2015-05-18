@@ -35,7 +35,7 @@ void groupInsert(list<Student> &stu){
                 it->Course.push_back(newCourse);
             }
             else{
-                cout << "Find a same course in Student ID: \"" + it->getUID() + "\", Update it!" << endl; 
+                cout << "Warning: Find a same course in Student ID: \"" + it->getUID() + "\", Update it!" << endl; 
                 it2->setCourse(filename, Score, Point);
             }
         }
