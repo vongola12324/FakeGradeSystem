@@ -13,7 +13,7 @@ void loadStudent(list<Student> &stu){
         }
     }while(!fin);
     while(fin >> ID >> Name){
-        list<Student>::iterator it = findStudentByUID(UID);
+        list<Student>::iterator it = findStudentByUID(stu, ID);
         if(it==stu.end()){
             Student newStu;
             newStu.setIDandName(ID, Name);
