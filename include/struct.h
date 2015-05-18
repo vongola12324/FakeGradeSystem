@@ -83,4 +83,11 @@ struct Student{
         this->TotCredits = TotCredits;
         this->Average = (double)TotCoursePoints / (double)TotCredits;
     }
+
+    void suspend(){
+        this->ActFlag = false;
+        this->TotCoursePoints = 0;
+        this->TotCredits = 0;
+        this->Course.clear();
+    }
 };
