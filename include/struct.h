@@ -81,13 +81,17 @@ struct Student{
     void setAvgData(int TotCoursePoints, int TotCredits){
         this->TotCoursePoints = TotCoursePoints;
         this->TotCredits = TotCredits;
-        this->Average = (double)TotCoursePoints / (double)TotCredits;
+        if(TotCredits==0)
+            this->Average = 0;
+        else
+            this->Average = (double)TotCoursePoints / (double)TotCredits;
     }
 
     void suspend(){
         this->ActFlag = false;
         this->TotCoursePoints = 0;
         this->TotCredits = 0;
+        this->Average = 0.0;
         this->Course.clear();
     }
 };
