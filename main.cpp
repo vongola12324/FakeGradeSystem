@@ -59,5 +59,6 @@ int main(){
     cout << endl << "Bye." << endl;
     cout << "Press Enter to Continue......" ;
     cin.get();
+    stu.clear();
     return 0;
 }
